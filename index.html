@@ -61,19 +61,46 @@
             color: #d81b60;
             font-weight: bold;
         }
-        .test-output {
-            background-color: #e8f5e9;
-            border: 1px solid #c8e6c9;
+        .function-section {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
             padding: 15px;
-            margin-top: 20px;
-            border-radius: 8px;
+            margin-bottom: 15px;
+            border-radius: 5px;
         }
-        .test-output h3 {
-            color: #4CAF50;
-            margin-top: 0;
-        }
-        .test-output p {
+        .function-section label {
+            display: inline-block;
+            margin-right: 10px;
             margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .function-section input[type="number"],
+        .function-section input[type="text"] {
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100px; /* Largura menor para os inputs */
+        }
+        .function-section button {
+            background-color: #8e24aa;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .function-section button:hover {
+            background-color: #a747d1;
+        }
+        .function-output {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e6ffe6;
+            border: 1px solid #b3e0b3;
+            border-radius: 4px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -88,7 +115,7 @@
         <a href="#desafios">Desafios</a>
         <a href="#contribuicoes">Contribuições</a>
         <a href="#recursos">Recursos</a>
-        <a href="#funcoes-js">Testes JS</a>
+        <a href="#funcoes-js">Testes Interativos</a>
     </nav>
 
     <div class="container">
@@ -123,10 +150,57 @@
         </section>
 
         <section id="funcoes-js" class="main-content">
-            <h2>Testes das Funções JavaScript</h2>
-            <div class="test-output" id="output-js">
-                <h3>Resultados das Funções:</h3>
+            <h2>Testes Interativos das Funções JavaScript</h2>
+
+            <div class="function-section">
+                <h3>1) MAIOR_MENOR(a, b, c, d, e)</h3>
+                <label for="maiorMenorA">A:</label><input type="number" id="maiorMenorA" value="10">
+                <label for="maiorMenorB">B:</label><input type="number" id="maiorMenorB" value="5">
+                <label for="maiorMenorC">C:</label><input type="number" id="maiorMenorC" value="20">
+                <label for="maiorMenorD">D:</label><input type="number" id="maiorMenorD" value="3">
+                <label for="maiorMenorE">E:</label><input type="number" id="maiorMenorE" value="15">
+                <button onclick="executarMaiorMenor()">Testar</button>
+                <div class="function-output" id="outputMaiorMenor"></div>
             </div>
+
+            <div class="function-section">
+                <h3>2) VOGAL(c)</h3>
+                <label for="vogalChar">Caractere:</label><input type="text" maxlength="1" id="vogalChar" value="a">
+                <button onclick="executarVogal()">Testar</button>
+                <div class="function-output" id="outputVogal"></div>
+            </div>
+
+            <div class="function-section">
+                <h3>3) LIMITES(li, ls)</h3>
+                <label for="limitesLi">Limite Inferior:</label><input type="number" id="limitesLi" value="1">
+                <label for="limitesLs">Limite Superior:</label><input type="number" id="limitesLs" value="10">
+                <button onclick="executarLimites()">Testar</button>
+                <div class="function-output" id="outputLimites"></div>
+            </div>
+
+            <div class="function-section">
+                <h3>4) ORDEM(a, b, c)</h3>
+                <label for="ordemA">A:</label><input type="number" id="ordemA" value="5">
+                <label for="ordemB">B:</label><input type="number" id="ordemB" value="2">
+                <label for="ordemC">C:</label><input type="number" id="ordemC" value="8">
+                <button onclick="executarOrdem()">Testar</button>
+                <div class="function-output" id="outputOrdem"></div>
+            </div>
+
+            <div class="function-section">
+                <h3>5) POSITIVO_NEGATIVO(x)</h3>
+                <label for="posNegX">Valor:</label><input type="number" id="posNegX" value="10">
+                <button onclick="executarPositivoNegativo()">Testar</button>
+                <div class="function-output" id="outputPositivoNegativo"></div>
+            </div>
+
+            <div class="function-section">
+                <h3>6) PAR_IMPAR(x)</h3>
+                <label for="parImparX">Valor:</label><input type="number" id="parImparX" value="4">
+                <button onclick="executarParImpar()">Testar</button>
+                <div class="function-output" id="outputParImpar"></div>
+            </div>
+
         </section>
     </div>
 
@@ -183,37 +257,48 @@
             return x % 2 == 0;
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const outputDiv = document.getElementById('output-js');
-            let htmlContent = '<h3>Resultados das Funções:</h3>';
+        function executarMaiorMenor() {
+            const a = parseInt(document.getElementById('maiorMenorA').value);
+            const b = parseInt(document.getElementById('maiorMenorB').value);
+            const c = parseInt(document.getElementById('maiorMenorC').value);
+            const d = parseInt(document.getElementById('maiorMenorD').value);
+            const e = parseInt(document.getElementById('maiorMenorE').value);
+            const resultado = MAIOR_MENOR(a, b, c, d, e);
+            document.getElementById('outputMaiorMenor').textContent = resultado;
+        }
 
-            htmlContent += `<p><strong>MAIOR_MENOR:</strong> ${MAIOR_MENOR(10, 5, 20, 3, 15)}</p>`;
-            htmlContent += `<p><strong>MAIOR_MENOR:</strong> ${MAIOR_MENOR(-5, 0, 10, -2, 7)}</p>`;
+        function executarVogal() {
+            const char = document.getElementById('vogalChar').value;
+            const resultado = VOGAL(char) == 1 ? 'Sim, é vogal' : 'Nao, nao é vogal';
+            document.getElementById('outputVogal').textContent = resultado;
+        }
 
-            htmlContent += `<p><strong>VOGAL('a'):</strong> ${VOGAL('a') == 1 ? 'Sim' : 'Nao'}</p>`;
-            htmlContent += `<p><strong>VOGAL('B'):</strong> ${VOGAL('B') == 1 ? 'Sim' : 'Nao'}</p>`;
-            htmlContent += `<p><strong>VOGAL('o'):</strong> ${VOGAL('o') == 1 ? 'Sim' : 'Nao'}</p>`;
-            htmlContent += `<p><strong>VOGAL('7'):</strong> ${VOGAL('7') == 1 ? 'Sim' : 'Nao'}</p>`;
+        function executarLimites() {
+            const li = parseInt(document.getElementById('limitesLi').value);
+            const ls = parseInt(document.getElementById('limitesLs').value);
+            const resultado = LIMITES(li, ls);
+            document.getElementById('outputLimites').textContent = resultado;
+        }
 
-            htmlContent += `<p><strong>LIMITES(1, 10):</strong> ${LIMITES(1, 10)}</p>`;
-            htmlContent += `<p><strong>LIMITES(0, 5):</strong> ${LIMITES(0, 5)}</p>`;
-            htmlContent += `<p><strong>LIMITES(10, 20):</strong> ${LIMITES(10, 20)}</p>`;
+        function executarOrdem() {
+            const a = parseInt(document.getElementById('ordemA').value);
+            const b = parseInt(document.getElementById('ordemB').value);
+            const c = parseInt(document.getElementById('ordemC').value);
+            const resultado = ORDEM(a, b, c);
+            document.getElementById('outputOrdem').textContent = `Valores ordenados: [${resultado.join(', ')}]`;
+        }
 
-            const ordem1 = ORDEM(5, 2, 8);
-            htmlContent += `<p><strong>ORDEM(5, 2, 8):</strong> [${ordem1.join(', ')}]</p>`;
-            const ordem2 = ORDEM(1, 9, 4);
-            htmlContent += `<p><strong>ORDEM(1, 9, 4):</strong> [${ordem2.join(', ')}]</p>`;
+        function executarPositivoNegativo() {
+            const x = parseInt(document.getElementById('posNegX').value);
+            const resultado = POSITIVO_NEGATIVO(x) ? 'Positivo ou zero' : 'Negativo';
+            document.getElementById('outputPositivoNegativo').textContent = resultado;
+        }
 
-            htmlContent += `<p><strong>POSITIVO_NEGATIVO(10):</strong> ${POSITIVO_NEGATIVO(10) ? 'Sim' : 'Nao'}</p>`;
-            htmlContent += `<p><strong>POSITIVO_NEGATIVO(-3):</strong> ${POSITIVO_NEGATIVO(-3) ? 'Sim' : 'Nao'}</p>`;
-            htmlContent += `<p><strong>POSITIVO_NEGATIVO(0):</strong> ${POSITIVO_NEGATIVO(0) ? 'Sim' : 'Nao'}</p>`;
-
-            htmlContent += `<p><strong>PAR_IMPAR(4):</strong> ${PAR_IMPAR(4) ? 'Sim' : 'Nao'}</p>`;
-            htmlContent += `<p><strong>PAR_IMPAR(7):</strong> ${PAR_IMPAR(7) ? 'Sim' : 'Nao'}</p>`;
-            htmlContent += `<p><strong>PAR_IMPAR(0):</strong> ${PAR_IMPAR(0) ? 'Sim' : 'Nao'}</p>`;
-
-            outputDiv.innerHTML = htmlContent;
-        });
+        function executarParImpar() {
+            const x = parseInt(document.getElementById('parImparX').value);
+            const resultado = PAR_IMPAR(x) ? 'É par' : 'É impar';
+            document.getElementById('outputParImpar').textContent = resultado;
+        }
     </script>
 </body>
 </html>
