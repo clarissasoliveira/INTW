@@ -61,6 +61,20 @@
             color: #d81b60;
             font-weight: bold;
         }
+        .test-output {
+            background-color: #e8f5e9;
+            border: 1px solid #c8e6c9;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+        .test-output h3 {
+            color: #4CAF50;
+            margin-top: 0;
+        }
+        .test-output p {
+            margin-bottom: 5px;
+        }
     </style>
 </head>
 <body>
@@ -74,6 +88,7 @@
         <a href="#desafios">Desafios</a>
         <a href="#contribuicoes">Contribuições</a>
         <a href="#recursos">Recursos</a>
+        <a href="#funcoes-js">Testes JS</a>
     </nav>
 
     <div class="container">
@@ -106,10 +121,99 @@
             </ul>
             <p>Incentivamos você a explorar essas opções e a se conectar com outras profissionais incríveis!</p>
         </section>
+
+        <section id="funcoes-js" class="main-content">
+            <h2>Testes das Funções JavaScript</h2>
+            <div class="test-output" id="output-js">
+                <h3>Resultados das Funções:</h3>
+            </div>
+        </section>
     </div>
 
     <footer>
         <p>Site criado por Júlia Clarissa Tenório Rocha de Oliveira &copy; 2025</p>
     </footer>
+
+    <script>
+        function MAIOR_MENOR(a, b, c, d, e) {
+            const valores = [a, b, c, d, e];
+            let maior = valores[0];
+            let menor = valores[0];
+
+            for (let i = 1; i < valores.length; i++) {
+                if (valores[i] > maior) {
+                    maior = valores[i];
+                }
+                if (valores[i] < menor) {
+                    menor = valores[i];
+                }
+            }
+            return `Valores: ${a}, ${b}, ${c}, ${d}, ${e}. Maior: ${maior}, Menor: ${menor}`;
+        }
+
+        function VOGAL(c) {
+            const vogais = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+            return vogais.includes(c) ? 1 : 0;
+        }
+
+        function LIMITES(li, ls) {
+            let somaPares = 0;
+            let paresNoIntervalo = [];
+
+            for (let i = li + 1; i < ls; i++) {
+                if (i % 2 == 0) {
+                    paresNoIntervalo.push(i);
+                    somaPares += i;
+                }
+            }
+            return `Intervalo (${li}, ${ls}). Pares: [${paresNoIntervalo.join(', ')}]. Somatório: ${somaPares}`;
+        }
+
+        function ORDEM(a, b, c) {
+            const valores = [a, b, c];
+            valores.sort((x, y) => x - y);
+            return valores;
+        }
+
+        function POSITIVO_NEGATIVO(x) {
+            return x >= 0;
+        }
+
+        function PAR_IMPAR(x) {
+            return x % 2 == 0;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const outputDiv = document.getElementById('output-js');
+            let htmlContent = '<h3>Resultados das Funções:</h3>';
+
+            htmlContent += `<p><strong>MAIOR_MENOR:</strong> ${MAIOR_MENOR(10, 5, 20, 3, 15)}</p>`;
+            htmlContent += `<p><strong>MAIOR_MENOR:</strong> ${MAIOR_MENOR(-5, 0, 10, -2, 7)}</p>`;
+
+            htmlContent += `<p><strong>VOGAL('a'):</strong> ${VOGAL('a') == 1 ? 'Sim' : 'Nao'}</p>`;
+            htmlContent += `<p><strong>VOGAL('B'):</strong> ${VOGAL('B') == 1 ? 'Sim' : 'Nao'}</p>`;
+            htmlContent += `<p><strong>VOGAL('o'):</strong> ${VOGAL('o') == 1 ? 'Sim' : 'Nao'}</p>`;
+            htmlContent += `<p><strong>VOGAL('7'):</strong> ${VOGAL('7') == 1 ? 'Sim' : 'Nao'}</p>`;
+
+            htmlContent += `<p><strong>LIMITES(1, 10):</strong> ${LIMITES(1, 10)}</p>`;
+            htmlContent += `<p><strong>LIMITES(0, 5):</strong> ${LIMITES(0, 5)}</p>`;
+            htmlContent += `<p><strong>LIMITES(10, 20):</strong> ${LIMITES(10, 20)}</p>`;
+
+            const ordem1 = ORDEM(5, 2, 8);
+            htmlContent += `<p><strong>ORDEM(5, 2, 8):</strong> [${ordem1.join(', ')}]</p>`;
+            const ordem2 = ORDEM(1, 9, 4);
+            htmlContent += `<p><strong>ORDEM(1, 9, 4):</strong> [${ordem2.join(', ')}]</p>`;
+
+            htmlContent += `<p><strong>POSITIVO_NEGATIVO(10):</strong> ${POSITIVO_NEGATIVO(10) ? 'Sim' : 'Nao'}</p>`;
+            htmlContent += `<p><strong>POSITIVO_NEGATIVO(-3):</strong> ${POSITIVO_NEGATIVO(-3) ? 'Sim' : 'Nao'}</p>`;
+            htmlContent += `<p><strong>POSITIVO_NEGATIVO(0):</strong> ${POSITIVO_NEGATIVO(0) ? 'Sim' : 'Nao'}</p>`;
+
+            htmlContent += `<p><strong>PAR_IMPAR(4):</strong> ${PAR_IMPAR(4) ? 'Sim' : 'Nao'}</p>`;
+            htmlContent += `<p><strong>PAR_IMPAR(7):</strong> ${PAR_IMPAR(7) ? 'Sim' : 'Nao'}</p>`;
+            htmlContent += `<p><strong>PAR_IMPAR(0):</strong> ${PAR_IMPAR(0) ? 'Sim' : 'Nao'}</p>`;
+
+            outputDiv.innerHTML = htmlContent;
+        });
+    </script>
 </body>
 </html>
