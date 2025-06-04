@@ -9,28 +9,29 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #5BCEFA;
             color: #333;
         }
         header {
-            background-color: #6a0572;
+            background-color: #F5A9B8;
             color: white;
             padding: 1em 0;
             text-align: center;
         }
         nav {
-            background-color: #8e24aa;
+            background-color: #FFFFFF;
             padding: 0.5em 0;
             text-align: center;
         }
         nav a {
-            color: white;
+            color: #5BCEFA;
             padding: 0.5em 1em;
             text-decoration: none;
             text-transform: uppercase;
         }
         nav a:hover {
-            background-color: #a747d1;
+            background-color: #F5A9B8;
+            color: white;
         }
         .container {
             width: 80%;
@@ -44,12 +45,13 @@
             margin-bottom: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 1px solid #F5A9B8;
         }
         .main-content h2 {
-            color: #6a0572;
+            color: #F5A9B8;
         }
         footer {
-            background-color: #6a0572;
+            background-color: #F5A9B8;
             color: white;
             text-align: center;
             padding: 1em 0;
@@ -58,65 +60,8 @@
             width: 100%;
         }
         .highlight {
-            color: #d81b60;
+            color: #A7D5ED;
             font-weight: bold;
-        }
-        .function-card {
-            background-color: #fff0f5;
-            border: 1px solid #ffc0cb;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-        }
-        .function-card h3 {
-            color: #6a0572;
-            margin-top: 0;
-            border-bottom: 1px solid #ffb6c1;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-        }
-        .input-group {
-            margin-bottom: 15px;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 10px;
-        }
-        .input-group label {
-            font-weight: bold;
-            color: #4a4a4a;
-        }
-        .input-group input[type="number"],
-        .input-group input[type="text"] {
-            flex: 1;
-            padding: 10px;
-            border: 1px solid #ffb6c1;
-            border-radius: 5px;
-            min-width: 80px;
-            max-width: 150px;
-        }
-        .function-card button {
-            background-color: #e91e63;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s ease;
-        }
-        .function-card button:hover {
-            background-color: #d81b60;
-        }
-        .function-output {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #f0f8ff;
-            border: 1px solid #add8e6;
-            border-radius: 5px;
-            font-weight: bold;
-            color: #0056b3;
         }
     </style>
 </head>
@@ -131,7 +76,7 @@
         <a href="#desafios">Desafios</a>
         <a href="#contribuicoes">Contribuições</a>
         <a href="#recursos">Recursos</a>
-        <a href="#funcoes-js">Testes Interativos</a>
+        <a href="testes.html">Testes Interativos</a>
     </nav>
 
     <div class="container">
@@ -164,169 +109,10 @@
             </ul>
             <p>Incentivamos você a explorar essas opções e a se conectar com outras profissionais incríveis!</p>
         </section>
-
-        <section id="funcoes-js" class="main-content">
-            <h2>Testes Interativos das Funções JavaScript</h2>
-
-            <div class="function-card">
-                <h3>1) Maior e Menor Valor</h3>
-                <div class="input-group">
-                    <label for="maiorMenorA">A:</label><input type="number" id="maiorMenorA" value="10">
-                    <label for="maiorMenorB">B:</label><input type="number" id="maiorMenorB" value="5">
-                    <label for="maiorMenorC">C:</label><input type="number" id="maiorMenorC" value="20">
-                    <label for="maiorMenorD">D:</label><input type="number" id="maiorMenorD" value="3">
-                    <label for="maiorMenorE">E:</label><input type="number" id="maiorMenorE" value="15">
-                </div>
-                <button onclick="executarMaiorMenor()">Verificar</button>
-                <div class="function-output" id="outputMaiorMenor"></div>
-            </div>
-
-            <div class="function-card">
-                <h3>2) Verificar Vogal</h3>
-                <div class="input-group">
-                    <label for="vogalChar">Caractere:</label><input type="text" maxlength="1" id="vogalChar" value="a">
-                </div>
-                <button onclick="executarVogal()">Verificar</button>
-                <div class="function-output" id="outputVogal"></div>
-            </div>
-
-            <div class="function-card">
-                <h3>3) Limites e Pares</h3>
-                <div class="input-group">
-                    <label for="limitesLi">Limite Inferior:</label><input type="number" id="limitesLi" value="1">
-                    <label for="limitesLs">Limite Superior:</label><input type="number" id="limitesLs" value="10">
-                </div>
-                <button onclick="executarLimites()">Calcular</button>
-                <div class="function-output" id="outputLimites"></div>
-            </div>
-
-            <div class="function-card">
-                <h3>4) Ordenar 3 Valores</h3>
-                <div class="input-group">
-                    <label for="ordemA">A:</label><input type="number" id="ordemA" value="5">
-                    <label for="ordemB">B:</label><input type="number" id="ordemB" value="2">
-                    <label for="ordemC">C:</label><input type="number" id="ordemC" value="8">
-                </div>
-                <button onclick="executarOrdem()">Ordenar</button>
-                <div class="function-output" id="outputOrdem"></div>
-            </div>
-
-            <div class="function-card">
-                <h3>5) Positivo ou Negativo</h3>
-                <div class="input-group">
-                    <label for="posNegX">Valor:</label><input type="number" id="posNegX" value="10">
-                </div>
-                <button onclick="executarPositivoNegativo()">Verificar</button>
-                <div class="function-output" id="outputPositivoNegativo"></div>
-            </div>
-
-            <div class="function-card">
-                <h3>6) Par ou Ímpar</h3>
-                <div class="input-group">
-                    <label for="parImparX">Valor:</label><input type="number" id="parImparX" value="4">
-                </div>
-                <button onclick="executarParImpar()">Verificar</button>
-                <div class="function-output" id="outputParImpar"></div>
-            </div>
-
-        </section>
     </div>
 
     <footer>
         <p>Site criado por Júlia Clarissa Tenório Rocha de Oliveira &copy; 2025</p>
     </footer>
-
-    <script>
-        function MAIOR_MENOR(a, b, c, d, e) {
-            const valores = [a, b, c, d, e];
-            let maior = valores[0];
-            let menor = valores[0];
-
-            for (let i = 1; i < valores.length; i++) {
-                if (valores[i] > maior) {
-                    maior = valores[i];
-                }
-                if (valores[i] < menor) {
-                    menor = valores[i];
-                }
-            }
-            return `Valores: ${a}, ${b}, ${c}, ${d}, ${e}. Maior: ${maior}, Menor: ${menor}`;
-        }
-
-        function VOGAL(c) {
-            const vogais = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
-            return vogais.includes(c) ? 1 : 0;
-        }
-
-        function LIMITES(li, ls) {
-            let somaPares = 0;
-            let paresNoIntervalo = [];
-
-            for (let i = li + 1; i < ls; i++) {
-                if (i % 2 == 0) {
-                    paresNoIntervalo.push(i);
-                    somaPares += i;
-                }
-            }
-            return `Intervalo (${li}, ${ls}). Pares: [${paresNoIntervalo.join(', ')}]. Somatório: ${somaPares}`;
-        }
-
-        function ORDEM(a, b, c) {
-            const valores = [a, b, c];
-            valores.sort((x, y) => x - y);
-            return valores;
-        }
-
-        function POSITIVO_NEGATIVO(x) {
-            return x >= 0;
-        }
-
-        function PAR_IMPAR(x) {
-            return x % 2 == 0;
-        }
-
-        function executarMaiorMenor() {
-            const a = parseInt(document.getElementById('maiorMenorA').value);
-            const b = parseInt(document.getElementById('maiorMenorB').value);
-            const c = parseInt(document.getElementById('maiorMenorC').value);
-            const d = parseInt(document.getElementById('maiorMenorD').value);
-            const e = parseInt(document.getElementById('maiorMenorE').value);
-            const resultado = MAIOR_MENOR(a, b, c, d, e);
-            document.getElementById('outputMaiorMenor').textContent = resultado;
-        }
-
-        function executarVogal() {
-            const char = document.getElementById('vogalChar').value;
-            const resultado = VOGAL(char) == 1 ? 'Sim, é vogal' : 'Nao, nao é vogal';
-            document.getElementById('outputVogal').textContent = resultado;
-        }
-
-        function executarLimites() {
-            const li = parseInt(document.getElementById('limitesLi').value);
-            const ls = parseInt(document.getElementById('limitesLs').value);
-            const resultado = LIMITES(li, ls);
-            document.getElementById('outputLimites').textContent = resultado;
-        }
-
-        function executarOrdem() {
-            const a = parseInt(document.getElementById('ordemA').value);
-            const b = parseInt(document.getElementById('ordemB').value);
-            const c = parseInt(document.getElementById('ordemC').value);
-            const resultado = ORDEM(a, b, c);
-            document.getElementById('outputOrdem').textContent = `Valores ordenados: [${resultado.join(', ')}]`;
-        }
-
-        function executarPositivoNegativo() {
-            const x = parseInt(document.getElementById('posNegX').value);
-            const resultado = POSITIVO_NEGATIVO(x) ? 'Positivo ou zero' : 'Negativo';
-            document.getElementById('outputPositivoNegativo').textContent = resultado;
-        }
-
-        function executarParImpar() {
-            const x = parseInt(document.getElementById('parImparX').value);
-            const resultado = PAR_IMPAR(x) ? 'É par' : 'É impar';
-            document.getElementById('outputParImpar').textContent = resultado;
-        }
-    </script>
 </body>
 </html>
