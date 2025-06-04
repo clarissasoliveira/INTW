@@ -1,3 +1,7 @@
+Com certeza! Seu site agora está com as funções JavaScript integradas e interativas, permitindo que os usuários insiram valores e vejam os resultados diretamente na página, mantendo o design original e com pequenos toques de rosa bebê para um visual mais limpo e intuitivo.
+
+HTML
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -62,8 +66,8 @@
             font-weight: bold;
         }
         .function-card {
-            background-color: #fff0f5; /* Rosa bebê */
-            border: 1px solid #ffc0cb; /* Rosa bebê mais escuro */
+            background-color: #fff0f5;
+            border: 1px solid #ffc0cb;
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 10px;
@@ -72,7 +76,7 @@
         .function-card h3 {
             color: #6a0572;
             margin-top: 0;
-            border-bottom: 1px solid #ffb6c1; /* Rosa bebê */
+            border-bottom: 1px solid #ffb6c1;
             padding-bottom: 10px;
             margin-bottom: 15px;
         }
@@ -91,13 +95,13 @@
         .input-group input[type="text"] {
             flex: 1;
             padding: 10px;
-            border: 1px solid #ffb6c1; /* Rosa bebê */
+            border: 1px solid #ffb6c1;
             border-radius: 5px;
             min-width: 80px;
             max-width: 150px;
         }
         .function-card button {
-            background-color: #e91e63; /* Rosa mais vibrante para o botão */
+            background-color: #e91e63;
             color: white;
             padding: 10px 20px;
             border: none;
@@ -106,4 +110,227 @@
             font-size: 1em;
             transition: background-color 0.3s ease;
         }
-        .function-card button:
+        .function-card button:hover {
+            background-color: #d81b60;
+        }
+        .function-output {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f0f8ff;
+            border: 1px solid #add8e6;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mulheres Trans na Tecnologia da Informação</h1>
+        <p>Promovendo Inclusão e Reconhecimento</p>
+    </header>
+
+    <nav>
+        <a href="#introducao">Introdução</a>
+        <a href="#desafios">Desafios</a>
+        <a href="#contribuicoes">Contribuições</a>
+        <a href="#recursos">Recursos</a>
+        <a href="#funcoes-js">Testes Interativos</a>
+    </nav>
+
+    <div class="container">
+        <section id="introducao" class="main-content">
+            <h2>Bem-vindas à Nossa Comunidade!</h2>
+            <p>Este site é dedicado a celebrar e apoiar as <span class="highlight">mulheres trans</span> que atuam ou desejam atuar no vibrante mundo da <span class="highlight">Tecnologia da Informação (TI)</span>.</p>
+            <p>Acreditamos que a diversidade é uma força motriz para a inovação e que a inclusão de diferentes perspectivas enriquece o ambiente de trabalho e as soluções tecnológicas que criamos.</p>
+        </section>
+
+        <section id="desafios" class="main-content">
+            <h2>Superando Desafios</h2>
+            <p>Sabemos que mulheres trans podem enfrentar desafios únicos no mercado de trabalho, incluindo na área de TI. Isso pode envolver preconceito, discriminação e a falta de representatividade.</p>
+            <p>É fundamental que as empresas e a comunidade de TI trabalhem juntas para criar ambientes mais acolhedores, equitativos e seguros para todas.</p>
+        </section>
+
+        <section id="contribuicoes" class="main-content">
+            <h2>O Impacto e as Contribuições</h2>
+            <p>Mulheres trans trazem talentos, habilidades e experiências valiosas para a tecnologia. Sua capacidade de inovação e resiliência são ativos inestimáveis para qualquer equipe.</p>
+            <p>Muitas já estão deixando sua marca em diversas áreas da TI, como desenvolvimento de software, segurança cibernética, análise de dados e inteligência artificial.</p>
+        </section>
+
+        <section id="recursos" class="main-content">
+            <h2>Recursos e Apoio</h2>
+            <p>Para quem busca conhecimento, apoio ou oportunidades, existem diversas iniciativas e comunidades:</p>
+            <ul>
+                <li>Grupos de apoio para mulheres trans na tecnologia.</li>
+                <li>Programas de mentoria e desenvolvimento profissional.</li>
+                <li>Eventos e conferências que promovem a diversidade e inclusão.</li>
+                <li>Cursos e bootcamps focados em capacitação tecnológica.</li>
+            </ul>
+            <p>Incentivamos você a explorar essas opções e a se conectar com outras profissionais incríveis!</p>
+        </section>
+
+        <section id="funcoes-js" class="main-content">
+            <h2>Testes Interativos das Funções JavaScript</h2>
+
+            <div class="function-card">
+                <h3>1) Maior e Menor Valor</h3>
+                <div class="input-group">
+                    <label for="maiorMenorA">A:</label><input type="number" id="maiorMenorA" value="10">
+                    <label for="maiorMenorB">B:</label><input type="number" id="maiorMenorB" value="5">
+                    <label for="maiorMenorC">C:</label><input type="number" id="maiorMenorC" value="20">
+                    <label for="maiorMenorD">D:</label><input type="number" id="maiorMenorD" value="3">
+                    <label for="maiorMenorE">E:</label><input type="number" id="maiorMenorE" value="15">
+                </div>
+                <button onclick="executarMaiorMenor()">Verificar</button>
+                <div class="function-output" id="outputMaiorMenor"></div>
+            </div>
+
+            <div class="function-card">
+                <h3>2) Verificar Vogal</h3>
+                <div class="input-group">
+                    <label for="vogalChar">Caractere:</label><input type="text" maxlength="1" id="vogalChar" value="a">
+                </div>
+                <button onclick="executarVogal()">Verificar</button>
+                <div class="function-output" id="outputVogal"></div>
+            </div>
+
+            <div class="function-card">
+                <h3>3) Limites e Pares</h3>
+                <div class="input-group">
+                    <label for="limitesLi">Limite Inferior:</label><input type="number" id="limitesLi" value="1">
+                    <label for="limitesLs">Limite Superior:</label><input type="number" id="limitesLs" value="10">
+                </div>
+                <button onclick="executarLimites()">Calcular</button>
+                <div class="function-output" id="outputLimites"></div>
+            </div>
+
+            <div class="function-card">
+                <h3>4) Ordenar 3 Valores</h3>
+                <div class="input-group">
+                    <label for="ordemA">A:</label><input type="number" id="ordemA" value="5">
+                    <label for="ordemB">B:</label><input type="number" id="ordemB" value="2">
+                    <label for="ordemC">C:</label><input type="number" id="ordemC" value="8">
+                </div>
+                <button onclick="executarOrdem()">Ordenar</button>
+                <div class="function-output" id="outputOrdem"></div>
+            </div>
+
+            <div class="function-card">
+                <h3>5) Positivo ou Negativo</h3>
+                <div class="input-group">
+                    <label for="posNegX">Valor:</label><input type="number" id="posNegX" value="10">
+                </div>
+                <button onclick="executarPositivoNegativo()">Verificar</button>
+                <div class="function-output" id="outputPositivoNegativo"></div>
+            </div>
+
+            <div class="function-card">
+                <h3>6) Par ou Ímpar</h3>
+                <div class="input-group">
+                    <label for="parImparX">Valor:</label><input type="number" id="parImparX" value="4">
+                </div>
+                <button onclick="executarParImpar()">Verificar</button>
+                <div class="function-output" id="outputParImpar"></div>
+            </div>
+
+        </section>
+    </div>
+
+    <footer>
+        <p>Site criado por Júlia Clarissa Tenório Rocha de Oliveira &copy; 2025</p>
+    </footer>
+
+    <script>
+        function MAIOR_MENOR(a, b, c, d, e) {
+            const valores = [a, b, c, d, e];
+            let maior = valores[0];
+            let menor = valores[0];
+
+            for (let i = 1; i < valores.length; i++) {
+                if (valores[i] > maior) {
+                    maior = valores[i];
+                }
+                if (valores[i] < menor) {
+                    menor = valores[i];
+                }
+            }
+            return `Valores: ${a}, ${b}, ${c}, ${d}, ${e}. Maior: ${maior}, Menor: ${menor}`;
+        }
+
+        function VOGAL(c) {
+            const vogais = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+            return vogais.includes(c) ? 1 : 0;
+        }
+
+        function LIMITES(li, ls) {
+            let somaPares = 0;
+            let paresNoIntervalo = [];
+
+            for (let i = li + 1; i < ls; i++) {
+                if (i % 2 == 0) {
+                    paresNoIntervalo.push(i);
+                    somaPares += i;
+                }
+            }
+            return `Intervalo (${li}, ${ls}). Pares: [${paresNoIntervalo.join(', ')}]. Somatório: ${somaPares}`;
+        }
+
+        function ORDEM(a, b, c) {
+            const valores = [a, b, c];
+            valores.sort((x, y) => x - y);
+            return valores;
+        }
+
+        function POSITIVO_NEGATIVO(x) {
+            return x >= 0;
+        }
+
+        function PAR_IMPAR(x) {
+            return x % 2 == 0;
+        }
+
+        function executarMaiorMenor() {
+            const a = parseInt(document.getElementById('maiorMenorA').value);
+            const b = parseInt(document.getElementById('maiorMenorB').value);
+            const c = parseInt(document.getElementById('maiorMenorC').value);
+            const d = parseInt(document.getElementById('maiorMenorD').value);
+            const e = parseInt(document.getElementById('maiorMenorE').value);
+            const resultado = MAIOR_MENOR(a, b, c, d, e);
+            document.getElementById('outputMaiorMenor').textContent = resultado;
+        }
+
+        function executarVogal() {
+            const char = document.getElementById('vogalChar').value;
+            const resultado = VOGAL(char) == 1 ? 'Sim, é vogal' : 'Nao, nao é vogal';
+            document.getElementById('outputVogal').textContent = resultado;
+        }
+
+        function executarLimites() {
+            const li = parseInt(document.getElementById('limitesLi').value);
+            const ls = parseInt(document.getElementById('limitesLs').value);
+            const resultado = LIMITES(li, ls);
+            document.getElementById('outputLimites').textContent = resultado;
+        }
+
+        function executarOrdem() {
+            const a = parseInt(document.getElementById('ordemA').value);
+            const b = parseInt(document.getElementById('ordemB').value);
+            const c = parseInt(document.getElementById('ordemC').value);
+            const resultado = ORDEM(a, b, c);
+            document.getElementById('outputOrdem').textContent = `Valores ordenados: [${resultado.join(', ')}]`;
+        }
+
+        function executarPositivoNegativo() {
+            const x = parseInt(document.getElementById('posNegX').value);
+            const resultado = POSITIVO_NEGATIVO(x) ? 'Positivo ou zero' : 'Negativo';
+            document.getElementById('outputPositivoNegativo').textContent = resultado;
+        }
+
+        function executarParImpar() {
+            const x = parseInt(document.getElementById('parImparX').value);
+            const resultado = PAR_IMPAR(x) ? 'É par' : 'É impar';
+            document.getElementById('outputParImpar').textContent = resultado;
+        }
+    </script>
+</body>
+</html>
