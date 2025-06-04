@@ -61,76 +61,49 @@
             color: #d81b60;
             font-weight: bold;
         }
-        .function-section {
-            background-color: #f8f8f8;
-            border: 1px solid #ddd;
-            padding: 15px;
+        .function-card {
+            background-color: #fff0f5; /* Rosa bebê */
+            border: 1px solid #ffc0cb; /* Rosa bebê mais escuro */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        .function-card h3 {
+            color: #6a0572;
+            margin-top: 0;
+            border-bottom: 1px solid #ffb6c1; /* Rosa bebê */
+            padding-bottom: 10px;
             margin-bottom: 15px;
-            border-radius: 5px;
         }
-        .function-section label {
-            display: inline-block;
-            margin-right: 10px;
-            margin-bottom: 5px;
+        .input-group {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+        }
+        .input-group label {
             font-weight: bold;
+            color: #4a4a4a;
         }
-        .function-section input[type="number"],
-        .function-section input[type="text"] {
-            padding: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            width: 100px;
+        .input-group input[type="number"],
+        .input-group input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ffb6c1; /* Rosa bebê */
+            border-radius: 5px;
+            min-width: 80px;
+            max-width: 150px;
         }
-        .function-section button {
-            background-color: #8e24aa;
+        .function-card button {
+            background-color: #e91e63; /* Rosa mais vibrante para o botão */
             color: white;
-            padding: 10px 15px;
+            padding: 10px 20px;
             border: none;
-            border-radius: 4px;
+            border-radius: 5px;
             cursor: pointer;
             font-size: 1em;
+            transition: background-color 0.3s ease;
         }
-        .function-section button:hover {
-            background-color: #a747d1;
-        }
-        .function-output {
-            margin-top: 10px;
-            padding: 10px;
-            background-color: #e6ffe6;
-            border: 1px solid #b3e0b3;
-            border-radius: 4px;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Mulheres Trans na Tecnologia da Informação</h1>
-        <p>Promovendo Inclusão e Reconhecimento</p>
-    </header>
-
-    <nav>
-        <a href="#introducao">Introdução</a>
-        <a href="#desafios">Desafios</a>
-        <a href="#contribuicoes">Contribuições</a>
-        <a href="#recursos">Recursos</a>
-        <a href="#funcoes-js">Testes Interativos</a>
-    </nav>
-
-    <div class="container">
-        <section id="introducao" class="main-content">
-            <h2>Bem-vindas à Nossa Comunidade!</h2>
-            <p>Este site é dedicado a celebrar e apoiar as <span class="highlight">mulheres trans</span> que atuam ou desejam atuar no vibrante mundo da <span class="highlight">Tecnologia da Informação (TI)</span>.</p>
-            <p>Acreditamos que a diversidade é uma força motriz para a inovação e que a inclusão de diferentes perspectivas enriquece o ambiente de trabalho e as soluções tecnológicas que criamos.</p>
-        </section>
-
-        <section id="desafios" class="main-content">
-            <h2>Superando Desafios</h2>
-            <p>Sabemos que mulheres trans podem enfrentar desafios únicos no mercado de trabalho, incluindo na área de TI. Isso pode envolver preconceito, discriminação e a falta de representatividade.</p>
-            <p>É fundamental que as empresas e a comunidade de TI trabalhem juntas para criar ambientes mais acolhedores, equitativos e seguros para todas.</p>
-        </section>
-
-        <section id="contribuicoes" class="main-content">
-            <h2>O Impacto e as Contribuições</h2>
-            <p>
+        .function-card button:
