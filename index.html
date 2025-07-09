@@ -74,6 +74,27 @@
                 <div class="form-container">
                     <h3>Inscrição: Workshop de Introdução à IA</h3>
                     <form id="evento-form" novalidate>
+                        <div class="form-group">
+                            <label for="evento-nome">Nome Completo</label>
+                            <input type="text" id="evento-nome" name="nome" required>
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="evento-email">E-mail</label>
+                            <input type="email" id="evento-email" name="email" required>
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="evento-nivel">Nível de Experiência</label>
+                            <select id="evento-nivel" name="nivel" required>
+                                <option value="">Selecione seu nível</option>
+                                <option value="iniciante">Iniciante</option>
+                                <option value="intermediario">Intermediário</option>
+                                <option value="avancado">Avançado</option>
+                            </select>
+                            <div class="error-message"></div>
+                        </div>
+                        <button type="submit" class="cta-button">Inscrever-se Gratuitamente</button>
                         </form>
                 </div>
             </div>
@@ -88,6 +109,21 @@
                  <div class="form-container">
                     <h3>Formulário de Sugestões</h3>
                     <form id="sugestao-form" novalidate>
+                        <div class="form-group">
+                            <label for="sugestao-nome">Seu Nome (Opcional)</label>
+                            <input type="text" id="sugestao-nome" name="nome">
+                        </div>
+                         <div class="form-group">
+                            <label for="sugestao-email">Seu E-mail (Opcional)</label>
+                            <input type="email" id="sugestao-email" name="email">
+                             <div class="error-message"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="sugestao-mensagem">Sua Sugestão</label>
+                            <textarea id="sugestao-mensagem" name="mensagem" rows="5" required></textarea>
+                            <div class="error-message"></div>
+                        </div>
+                        <button type="submit" class="cta-button">Enviar Sugestão</button>
                         </form>
                 </div>
             </div>
@@ -102,6 +138,27 @@
                  <div class="form-container">
                     <h3>Fale Conosco</h3>
                     <form id="contato-form" novalidate>
+                       <div class="form-group">
+                            <label for="contato-nome">Nome Completo</label>
+                            <input type="text" id="contato-nome" name="nome" required>
+                             <div class="error-message"></div>
+                        </div>
+                         <div class="form-group">
+                            <label for="contato-email">E-mail</label>
+                            <input type="email" id="contato-email" name="email" required>
+                             <div class="error-message"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contato-assunto">Assunto</label>
+                            <input type="text" id="contato-assunto" name="assunto" required>
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contato-mensagem">Mensagem</label>
+                            <textarea id="contato-mensagem" name="mensagem" rows="5" required></textarea>
+                            <div class="error-message"></div>
+                        </div>
+                        <button type="submit" class="cta-button">Enviar Mensagem</button>
                        </form>
                 </div>
             </div>
