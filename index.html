@@ -1,481 +1,109 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mulheres Trans na TI - Júlia Clarissa Tenório Rocha de Oliveira</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
             margin: 0;
             padding: 0;
-            background-color: #5BCEFA; /* Azul claro da bandeira trans */
-            color: #333;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
             line-height: 1.6;
         }
         header {
-            background-color: #F5A9B8; /* Rosa claro da bandeira trans */
-            color: white;
-            padding: 1.5em 0;
+            background-color: #fbfbfd;
+            padding: 1em 0;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid #e2e2e2;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
         }
         header h1 {
-            margin: 0;
+            color: #1d1d1f;
             font-size: 2.5em;
-            letter-spacing: 1px;
+            margin-bottom: 0.2em;
         }
         header p {
-            margin: 5px 0 0;
+            color: #6e6e73;
             font-size: 1.1em;
-            opacity: 0.9;
         }
         nav {
-            background-color: #FFFFFF; /* Branco da bandeira trans */
+            background-color: #fbfbfd;
             padding: 0.8em 0;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid #e2e2e2;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
         }
         nav a {
-            color: #5BCEFA; /* Azul claro */
-            padding: 0.8em 1.5em;
+            color: #007aff;
+            padding: 0.8em 1.2em;
             text-decoration: none;
-            text-transform: uppercase;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-        nav a:hover {
-            background-color: #F5A9B8; /* Rosa claro */
-            color: white;
+            font-weight: 500;
+            transition: color 0.3s ease, background-color 0.3s ease;
             border-radius: 5px;
         }
+        nav a:hover {
+            color: #0056b3;
+            background-color: rgba(0,122,255,0.08);
+        }
         .container {
-            width: 85%;
-            max-width: 1200px;
-            margin: 30px auto;
-            overflow: hidden;
-            padding: 0 20px;
+            width: 90%;
+            max-width: 980px;
+            margin: auto;
+            padding: 20px 0;
         }
         .main-content {
             background-color: white;
-            padding: 30px;
+            padding: 40px;
             margin-bottom: 30px;
             border-radius: 12px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-            border: 1px solid #F5A9B8;
-            transition: transform 0.3s ease;
-        }
-        .main-content:hover {
-            transform: translateY(-5px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border: 1px solid #e2e2e2;
         }
         .main-content h2 {
-            color: #F5A9B8;
+            color: #1d1d1f;
             font-size: 2em;
-            margin-top: 0;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #5BCEFA;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .main-content p {
+            color: #424245;
+            margin-bottom: 1em;
         }
         .main-content ul {
             list-style: none;
             padding: 0;
+            margin-top: 15px;
         }
         .main-content ul li {
-            background-color: #f9f9f9;
-            margin-bottom: 10px;
-            padding: 10px 15px;
-            border-radius: 8px;
-            border-left: 5px solid #5BCEFA;
+            padding: 8px 0;
+            color: #424245;
+            border-bottom: 1px solid #efefef;
+        }
+        .main-content ul li:last-child {
+            border-bottom: none;
         }
         footer {
-            background-color: #F5A9B8;
-            color: white;
+            background-color: #fbfbfd;
+            color: #6e6e73;
             text-align: center;
             padding: 1.5em 0;
+            border-top: 1px solid #e2e2e2;
             margin-top: 40px;
-            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
         }
         .highlight {
-            color: #A7D5ED;
-            font-weight: bold;
+            color: #007aff;
+            font-weight: 500;
         }
         .form-section {
-            background-color: #FFFFFF;
-            border: 1px solid #F5A9B8;
-            padding: 30px;
+            background-color: white;
+            padding: 40px;
             margin-bottom: 30px;
             border-radius: 12px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border: 1px solid #e2e2e2;
         }
-        .form-section h3 {
-            color: #F5A9B8;
-            margin-top: 0;
-            border-bottom: 2px solid #5BCEFA;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            font-size: 1.8em;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: #4a4a4a;
-            font-size: 1.1em;
-        }
-        .form-group input[type="text"],
-        .form-group input[type="email"],
-        .form-group input[type="password"],
-        .form-group textarea {
-            width: calc(100% - 22px);
-            padding: 12px;
-            border: 1px solid #F5A9B8;
-            border-radius: 6px;
-            font-size: 1em;
-            box-sizing: border-box;
-            transition: border-color 0.3s ease;
-        }
-        .form-group input[type="text"]:focus,
-        .form-group input[type="email"]:focus,
-        .form-group input[type="password"]:focus,
-        .form-group textarea:focus {
-            border-color: #5BCEFA;
-            outline: none;
-            box-shadow: 0 0 5px rgba(91, 206, 250, 0.5);
-        }
-        .form-group input[type="submit"],
-        .form-group button {
-            background-color: #5BCEFA;
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 1.1em;
-            font-weight: bold;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        .form-group input[type="submit"]:hover,
-        .form-group button:hover {
-            background-color: #F5A9B8;
-            transform: translateY(-2px);
-        }
-        .error-message {
-            color: #FF0000;
-            font-size: 0.9em;
-            margin-top: 5px;
-            display: block;
-        }
-        .success-message {
-            color: #008000;
-            font-weight: bold;
-            margin-top: 15px;
-            text-align: center;
-            background-color: #e6ffe6;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #b3e0b3;
-        }
-        .info-box {
-            background-color: #A7D5ED;
-            color: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 30px;
-            text-align: center;
-            font-size: 1.1em;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .hero-image {
-            width: 100%;
-            height: 300px;
-            background-image: url('https://via.placeholder.com/1200x300/F5A9B8/5BCEFA?text=Inclusao+na+Tecnologia'); /* Imagem placeholder */
-            background-size: cover;
-            background-position: center;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Mulheres Trans na Tecnologia da Informação</h1>
-        <p>Promovendo Inclusão e Reconhecimento</p>
-    </header>
-
-    <nav>
-        <a href="#introducao">Introdução</a>
-        <a href="#desafios">Desafios</a>
-        <a href="#contribuicoes">Contribuições</a>
-        <a href="#recursos">Recursos</a>
-        <a href="#contato">Contato</a>
-        <a href="#sugestoes">Sugestões</a>
-        <a href="#inscricao">Inscrição</a>
-        <a href="#cadastro">Cadastro</a>
-        <a href="testes.html">Testes Interativos</a>
-    </nav>
-
-    <div class="container">
-        <div class="hero-image"></div>
-
-        <section id="introducao" class="main-content">
-            <h2>Bem-vindas à Nossa Comunidade!</h2>
-            <p>Este site é dedicado a celebrar e apoiar as <span class="highlight">mulheres trans</span> que atuam ou desejam atuar no vibrante mundo da <span class="highlight">Tecnologia da Informação (TI)</span>.</p>
-            <p>Acreditamos que a diversidade é uma força motriz para a inovação e que a inclusão de diferentes perspectivas enriquece o ambiente de trabalho e as soluções tecnológicas que criamos.</p>
-            <div class="info-box" id="dataAtual"></div>
-            <button onclick="mudarCorFundo()">Alternar Cor de Fundo</button>
-        </section>
-
-        <section id="desafios" class="main-content">
-            <h2>Superando Desafios</h2>
-            <p>Sabemos que mulheres trans podem enfrentar desafios únicos no mercado de trabalho, incluindo na área de TI. Isso pode envolver preconceito, discriminação e a falta de representatividade.</p>
-            <p>É fundamental que as empresas e a comunidade de TI trabalhem juntas para criar ambientes mais acolhedores, equitativos e seguros para todas.</p>
-        </section>
-
-        <section id="contribuicoes" class="main-content">
-            <h2>O Impacto e as Contribuições</h2>
-            <p>Mulheres trans trazem talentos, habilidades e experiências valiosas para a tecnologia. Sua capacidade de inovação e resiliência são ativos inestimáveis para qualquer equipe.</p>
-            <p>Muitas já estão deixando sua marca em diversas áreas da TI, como desenvolvimento de software, segurança cibernética, análise de dados e inteligência artificial.</p>
-        </section>
-
-        <section id="recursos" class="main-content">
-            <h2>Recursos e Apoio</h2>
-            <p>Para quem busca conhecimento, apoio ou oportunidades, existem diversas iniciativas e comunidades:</p>
-            <ul>
-                <li>Grupos de apoio para mulheres trans na tecnologia.</li>
-                <li>Programas de mentoria e desenvolvimento profissional.</li>
-                <li>Eventos e conferências que promovem a diversidade e inclusão.</li>
-                <li>Cursos e bootcamps focados em capacitação tecnológica.</li>
-            </ul>
-            <p>Incentivamos você a explorar essas opções e a se conectar com outras profissionais incríveis!</p>
-        </section>
-
-        <section id="contato" class="main-content form-section">
-            <h2>Formulário de Contato</h2>
-            <form onsubmit="return validarContato()">
-                <div class="form-group">
-                    <label for="nomeContato">Nome:</label>
-                    <input type="text" id="nomeContato" name="nomeContato">
-                    <span class="error-message" id="erroNomeContato"></span>
-                </div>
-                <div class="form-group">
-                    <label for="emailContato">Email:</label>
-                    <input type="email" id="emailContato" name="emailContato">
-                    <span class="error-message" id="erroEmailContato"></span>
-                </div>
-                <div class="form-group">
-                    <label for="mensagemContato">Mensagem:</label>
-                    <textarea id="mensagemContato" name="mensagemContato" rows="5"></textarea>
-                    <span class="error-message" id="erroMensagemContato"></span>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Enviar Contato">
-                </div>
-                <p class="success-message" id="sucessoContato"></p>
-            </form>
-        </section>
-
-        <section id="sugestoes" class="main-content form-section">
-            <h2>Formulário de Sugestões</h2>
-            <form onsubmit="return validarSugestoes()">
-                <div class="form-group">
-                    <label for="sugestaoTexto">Sua Sugestão:</label>
-                    <textarea id="sugestaoTexto" name="sugestaoTexto" rows="5"></textarea>
-                    <span class="error-message" id="erroSugestaoTexto"></span>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Enviar Sugestão">
-                </div>
-                <p class="success-message" id="sucessoSugestoes"></p>
-            </form>
-        </section>
-
-        <section id="inscricao" class="main-content form-section">
-            <h2>Formulário de Inscrição para Eventos</h2>
-            <form onsubmit="return validarInscricao()">
-                <div class="form-group">
-                    <label for="nomeInscricao">Nome Completo:</label>
-                    <input type="text" id="nomeInscricao" name="nomeInscricao">
-                    <span class="error-message" id="erroNomeInscricao"></span>
-                </div>
-                <div class="form-group">
-                    <label for="emailInscricao">Email:</label>
-                    <input type="email" id="emailInscricao" name="emailInscricao">
-                    <span class="error-message" id="erroEmailInscricao"></span>
-                </div>
-                <div class="form-group">
-                    <label for="eventoInscricao">Evento de Interesse:</label>
-                    <input type="text" id="eventoInscricao" name="eventoInscricao">
-                    <span class="error-message" id="erroEventoInscricao"></span>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Inscrever-se">
-                </div>
-                <p class="success-message" id="sucessoInscricao"></p>
-            </form>
-        </section>
-
-        <section id="cadastro" class="main-content form-section">
-            <h2>Formulário de Cadastro</h2>
-            <form onsubmit="return validarCadastro()">
-                <div class="form-group">
-                    <label for="usuarioCadastro">Nome de Usuário:</label>
-                    <input type="text" id="usuarioCadastro" name="usuarioCadastro">
-                    <span class="error-message" id="erroUsuarioCadastro"></span>
-                </div>
-                <div class="form-group">
-                    <label for="senhaCadastro">Senha:</label>
-                    <input type="password" id="senhaCadastro" name="senhaCadastro">
-                    <span class="error-message" id="erroSenhaCadastro"></span>
-                </div>
-                <div class="form-group">
-                    <label for="confirmaSenhaCadastro">Confirmar Senha:</label>
-                    <input type="password" id="confirmaSenhaCadastro" name="confirmaSenhaCadastro">
-                    <span class="error-message" id="erroConfirmaSenhaCadastro"></span>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Cadastrar">
-                </div>
-                <p class="success-message" id="sucessoCadastro"></p>
-            </form>
-        </section>
-
-    </div>
-
-    <footer>
-        <p>Site criado por Júlia Clarissa Tenório Rocha de Oliveira &copy; 2025</p>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const dataAtualElement = document.getElementById('dataAtual');
-            const hoje = new Date();
-            dataAtualElement.textContent = `Hoje é: ${hoje.toLocaleDateString('pt-BR')}`;
-        });
-
-        function mudarCorFundo() {
-            const cores = ["#5BCEFA", "#F5A9B8", "#FFFFFF", "#A7D5ED"]; // Adicionei mais uma cor da bandeira
-            const corAtual = document.body.style.backgroundColor;
-            let proximaCorIndex = (cores.indexOf(corAtual) + 1) % cores.length;
-            document.body.style.backgroundColor = cores[proximaCorIndex];
-        }
-
-        function validarContato() {
-            let isValid = true;
-            const nome = document.getElementById('nomeContato').value;
-            const email = document.getElementById('emailContato').value;
-            const mensagem = document.getElementById('mensagemContato').value;
-
-            document.getElementById('erroNomeContato').textContent = '';
-            document.getElementById('erroEmailContato').textContent = '';
-            document.getElementById('erroMensagemContato').textContent = '';
-            document.getElementById('sucessoContato').textContent = '';
-
-            if (nome.length < 3) {
-                document.getElementById('erroNomeContato').textContent = 'Nome deve ter ao menos 3 caracters';
-                isValid = false;
-            }
-
-            if (!email.includes('@') || !email.includes('.')) {
-                document.getElementById('erroEmailContato').textContent = 'Email inválido';
-                isValid = false;
-            }
-
-            if (mensagem.length < 10) {
-                document.getElementById('erroMensagemContato').textContent = 'Mensagem muito curta';
-                isValid = false;
-            }
-
-            if (isValid) {
-                document.getElementById('sucessoContato').textContent = 'Mensagem enviada com sucesso!';
-                // Um pequeno erro: o formulário não é resetado automaticamente
-            }
-            return false; // Previne o envio real do formulário
-        }
-
-        function validarSugestoes() {
-            let isValid = true;
-            const sugestao = document.getElementById('sugestaoTexto').value;
-
-            document.getElementById('erroSugestaoTexto').textContent = '';
-            document.getElementById('sucessoSugestoes').textContent = '';
-
-            if (sugestao.length < 15) {
-                document.getElementById('erroSugestaoTexto').textContent = 'A sugestão deve ter no mínimo 15 caracteres';
-                isValid = false;
-            }
-
-            if (isValid) {
-                document.getElementById('sucessoSugestoes').textContent = 'Obrigado por sua sugestão!';
-            }
-            return false;
-        }
-
-        function validarInscricao() {
-            let isValid = true;
-            const nome = document.getElementById('nomeInscricao').value;
-            const email = document.getElementById('emailInscricao').value;
-            const evento = document.getElementById('eventoInscricao').value;
-
-            document.getElementById('erroNomeInscricao').textContent = '';
-            document.getElementById('erroEmailInscricao').textContent = '';
-            document.getElementById('erroEventoInscricao').textContent = '';
-            document.getElementById('sucessoInscricao').textContent = '';
-
-            if (nome.trim() == '') { // Outro pequeno erro: '==' ao invés de '==='
-                document.getElementById('erroNomeInscricao').textContent = 'Nome completo é obrigatorio';
-                isValid = false;
-            }
-
-            if (!email.includes('@') || !email.includes('.')) {
-                document.getElementById('erroEmailInscricao').textContent = 'Email incorreto';
-                isValid = false;
-            }
-
-            if (evento.trim() === '') {
-                document.getElementById('erroEventoInscricao').textContent = 'Evento de interesse é obrigatorio';
-                isValid = false;
-            }
-
-            if (isValid) {
-                document.getElementById('sucessoInscricao').textContent = 'Inscrição realizada com sucesso!';
-            }
-            return false;
-        }
-
-        function validarCadastro() {
-            let isValid = true;
-            const usuario = document.getElementById('usuarioCadastro').value;
-            const senha = document.getElementById('senhaCadastro').value;
-            const confirmaSenha = document.getElementById('confirmaSenhaCadastro').value;
-
-            document.getElementById('erroUsuarioCadastro').textContent = '';
-            document.getElementById('erroSenhaCadastro').textContent = '';
-            document.getElementById('erroConfirmaSenhaCadastro').textContent = '';
-            document.getElementById('sucessoCadastro').textContent = '';
-
-            if (usuario.length < 5) {
-                document.getElementById('erroUsuarioCadastro').textContent = 'Usuário deve ter 5+ caracteres';
-                isValid = false;
-            }
-
-            if (senha.length < 6) {
-                document.getElementById('erroSenhaCadastro').textContent = 'Senha deve ter 6 ou mais caracteres';
-                isValid = false;
-            } else if (senha !== confirmaSenha) {
-                document.getElementById('erroConfirmaSenhaCadastro').textContent = 'As senhas nao batem';
-                isValid = false;
-            }
-
-            if (isValid) {
-                document.getElementById('sucessoCadastro').textContent = 'Cadastro realizado com sucesso!';
-            }
-            return false;
-        }
-    </script>
-</body>
-</html>
