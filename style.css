@@ -40,7 +40,6 @@ body {
     color: var(--primary-text-color);
     font-family: var(--font-family);
     line-height: 1.6;
-    /* Transição suave para a troca de tema */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -50,7 +49,7 @@ body {
     padding: 0 20px;
 }
 
-/* 2. Cabeçalho, Navegação e Botão de Tema */
+/* 2. Cabeçalho, Navegação e Botão de Tema (COM CORREÇÕES) */
 header {
     position: sticky;
     top: 0;
@@ -61,7 +60,6 @@ header {
     border-bottom: 1px solid var(--border-color);
     transition: border-color 0.3s ease, background-color 0.3s ease;
 }
-/* Ajuste de cor de fundo do header para o modo claro */
 [data-theme="light"] header {
     background-color: rgba(255, 255, 255, 0.7);
 }
@@ -69,13 +67,14 @@ header {
 header nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 56px;
+    align-items: center; /* Alinha o logo e o container de links verticalmente */
+    height: 60px; /* Aumentei um pouco a altura para melhor espaçamento */
 }
 
+/* CORREÇÃO: Container para os links e o botão */
 .nav-links {
     display: flex;
-    align-items: center;
+    align-items: center; /* Alinha a lista de links e o botão um com o outro */
     gap: 25px;
 }
 
@@ -117,7 +116,8 @@ header ul li a.active {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: color 0.3s ease;
+    border-radius: 50%; /* Deixa o hover mais agradável */
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 #theme-toggle:hover {
     color: var(--trans-blue);
@@ -128,12 +128,11 @@ header ul li a.active {
     stroke: currentColor;
 }
 
-/* Esconde o ícone que não corresponde ao tema atual */
 [data-theme="dark"] .sun { display: none; }
 [data-theme="light"] .moon { display: none; }
 
 
-/* 3. Seções Principais */
+/* 3. Seções Principais (sem alterações) */
 .hero-section {
     min-height: 90vh;
     display: flex;
@@ -156,7 +155,7 @@ header ul li a.active {
     color: var(--primary-text-color);
 }
 [data-theme="light"] .hero-content h1 {
-    color: #000; /* Texto mais escuro no modo claro para destaque */
+    color: #000;
 }
 
 .hero-content p, .subtitle {
@@ -197,7 +196,7 @@ header ul li a.active {
     -webkit-text-fill-color: transparent;
 }
 
-/* 4. Cards */
+/* 4. Cards (sem alterações) */
 .card {
     background-color: var(--surface-color);
     padding: 30px;
@@ -219,7 +218,7 @@ header ul li a.active {
     color: var(--secondary-text-color);
 }
 
-/* 5. Formulários */
+/* 5. Formulários (sem alterações) */
 .form-container {
     max-width: 700px;
     margin: 0 auto;
@@ -253,7 +252,7 @@ header ul li a.active {
     box-shadow: 0 0 0 3px rgba(91, 206, 250, 0.4);
 }
 
-/* 6. Rodapé */
+/* 6. Rodapé (sem alterações) */
 footer {
     background-color: var(--surface-color);
     padding: 60px 0 20px;
@@ -262,11 +261,26 @@ footer {
     transition: background-color 0.3s ease, border-top-color 0.3s ease;
 }
 
-/* 7. Animações e Responsividade (sem alterações) */
+/* 7. Animações e Responsividade (COM CORREÇÕES) */
 .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
+
 @media (max-width: 768px) {
-    .hero-content h1 { font-size: 2.5rem; }
-    .nav-links { flex-direction: column; gap: 15px; }
-    header nav { height: auto; padding: 10px 0; }
+    /* CORREÇÃO: Alinhamento do menu mobile */
+    header nav {
+        flex-direction: column; /* Empilha o logo e os links */
+        height: auto;
+        padding: 15px 0;
+        gap: 15px;
+    }
+
+    .nav-links {
+        /* Garante que os links e o botão fiquem na mesma linha no mobile,
+           se preferir que fiquem empilhados, use flex-direction: column */
+        flex-direction: row; 
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
 }
